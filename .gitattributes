@@ -1,0 +1,7 @@
+*.dart linguist-language=Dart
+*.c linguist-vendored
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.java linguist-vendored
+*.kt linguist-vendored
+*.swift linguist-vendored
