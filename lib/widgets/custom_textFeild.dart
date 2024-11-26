@@ -3,14 +3,12 @@ import 'package:smart_chat/utils/app_string.dart';
 import 'package:smart_chat/utils/app_styles.dart';
 import '../utils/app_color.dart';
 class CustomTextfeild extends StatelessWidget {
-  const CustomTextfeild({super.key,required this.controller,required this.onSubmitted,required this.focusNode});
+  const CustomTextfeild({super.key,required this.controller,required this.onSubmitted});
   final TextEditingController controller;
   final void Function(String)? onSubmitted;
-  final FocusNode focusNode;
   @override
   Widget build(BuildContext context) {
     return TextField(
-      focusNode:focusNode,
       controller:controller,
       cursorColor:AppColor.whiteColor,
       style:AppStyles.normal22,

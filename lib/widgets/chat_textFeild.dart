@@ -7,12 +7,10 @@ class ChatTextfeild extends StatelessWidget {
     required this.controller,
     required this.onPressed,
     required this.onSubmitted,
-    required this.focusNode
   });
   final TextEditingController controller;
   final void Function()? onPressed;
   final void Function(String)? onSubmitted;
-  final FocusNode focusNode;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +19,6 @@ class ChatTextfeild extends StatelessWidget {
         children:[
           Expanded(
               child:CustomTextfeild(
-                  focusNode:focusNode,
                   controller: controller,
                   onSubmitted:onSubmitted
               )

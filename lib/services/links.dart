@@ -1,4 +1,4 @@
 class Links {
-  static const myKey   = "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";
+  static const myKey   = "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";
   static const baseUrl = "https://api.openai.com/v1";
 }

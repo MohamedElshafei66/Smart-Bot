@@ -7,4 +7,5 @@ class AppString {
   static const hintText   = "How can i help you?";
   static const loadText   = "Loading ...";
   static const errorText  = "Error";
+  static const snakBarText = "Please enter your message!";
 }
