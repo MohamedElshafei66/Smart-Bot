@@ -12,12 +12,21 @@ class MessageProvider with ChangeNotifier{
     notifyListeners();
   }
   Future<void> recieveMessageFormBot({required String message,required String choosenModel})async{
-    chatList.addAll(
-        await Api.getMessages(
-        message:message,
-        modelId:choosenModel
-    )
-    );
+    if (choosenModel.toLowerCase().startsWith("gpt")) {
+      chatList.addAll(
+        await Api.getMessagesGpt(
+        message: message,
+        modelId: choosenModel,
+      ));
+    }
+    else {
+      chatList.addAll(
+          await Api.getMessages(
+              message:message,
+              modelId:choosenModel
+          )
+      );
+    }
     notifyListeners();
   }
 }

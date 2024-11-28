@@ -44,7 +44,8 @@ class Api{
               }
           )
       );
-      var responseBody = jsonDecode(response.body);
+      //to allow you send messages by any language you want and receive like it
+        var responseBody = json.decode(utf8.decode(response.bodyBytes));
       if(responseBody['error'] != null){
         print(responseBody['error']['message']);
         throw HttpException("Error is:- ${responseBody['error']['message']}");
@@ -55,6 +56,48 @@ class Api{
             responseBody["choices"].length,
             (i)=>ChatMessages(
                 msg:responseBody["choices"][i]["text"],
+                msgIndex:1
+            )
+        );
+      }
+      return messages;
+    }catch(e){
+      print("Error is:- $e");
+      rethrow;
+    }
+  }
+  static Future<List<ChatMessages>> getMessagesGpt({required String message , required String modelId})async{
+    try{
+      var response = await http.post(
+          Uri.parse("${Links.baseUrl}/chat/completions"),
+          headers:{
+            "Authorization" : "Bearer ${Links.myKey}",
+            "Content-Type"  : "application/json"
+          },
+        body: jsonEncode(
+          {
+            "model": modelId,
+            "messages": [
+              {
+                "role": "user",
+                "content": message,
+              }
+            ]
+          },
+        ),
+      );
+      //to allow you send messages by any language you want and receive like it
+      var responseBody = json.decode(utf8.decode(response.bodyBytes));
+      if(responseBody['error'] != null){
+        print(responseBody['error']['message']);
+        throw HttpException("Error is:- ${responseBody['error']['message']}");
+      }
+      List<ChatMessages> messages = [];
+      if(responseBody["choices"].length > 0){
+        messages = List.generate(
+            responseBody["choices"].length,
+                (i)=>ChatMessages(
+                msg:responseBody["choices"][i]["message"]["content"],
                 msgIndex:1
             )
         );

@@ -4,7 +4,7 @@ import '../models/chat_models.dart';
 
 class ModelProvider with ChangeNotifier{
   List<ChatModels> chatModels = [];
-  String currentModel = "whisper-1";
+  String currentModel = "gpt-3.5-turbo-16k";
 
   List<ChatModels> get getModels{
     return chatModels;

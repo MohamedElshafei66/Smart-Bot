@@ -9,10 +9,12 @@ class CustomChat extends StatelessWidget {
   const CustomChat({
     super.key,
     required this.meg,
-    required this.indexMessage
+    required this.indexMessage,
+    this.animatedText = false,
   });
   final String meg;
   final int indexMessage;
+  final bool animatedText;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,16 +41,22 @@ class CustomChat extends StatelessWidget {
                 meg,
                 style:AppStyles.normal22
             ) :
+            animatedText ?
             DefaultTextStyle(
               style:AppStyles.normal22,
               child: AnimatedTextKit(
                   displayFullTextOnTap:true,
                   isRepeatingAnimation:false,
                   repeatForever:false,
+                  totalRepeatCount:1,
                   animatedTexts:[
                     TyperAnimatedText(meg.trim())
                   ]
               ),
+            ) :
+            Text(
+              meg.trim(),
+             style:AppStyles.normal22
             )
           ),
           indexMessage == 0 ?

@@ -48,6 +48,8 @@ class _CustomBodyState extends State<CustomBody> {
               return CustomChat(
                 meg:chatProvider.getMessages[i].msg,
                 indexMessage:chatProvider.getMessages[i].msgIndex,
+                //this to prevent animation in message that we already have it
+                animatedText:chatProvider.getMessages.length -1 == i,
               );
             },
           ),
