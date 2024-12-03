@@ -1,20 +1,23 @@
-<<<<<<< HEAD
-# smart_chat
+# Smart-Bot App
 
-A new Flutter project.
+Smart-Bot is an advanced AI-powered chatbot application that allows users to interact with it just like ChatGPT. It supports multiple models, offers diverse responses, and can communicate in various languages. Whether you need assistance, entertainment, or knowledge, Smart-Bot is here to help!
+
+---
+
+## Features
+
+- **Multiple AI Models**: Choose from different AI models to get varied responses based on your preference.
+- **Multilingual Support**: Communicate with Smart-Bot in any language.
+- **Interactive Conversations**: Ask anything, and Smart-Bot will provide accurate and insightful responses.
+- **Customizable Experience**: Tailor the bot's behavior to your needs.
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow these steps to set up and run the Smart-Bot app:
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# Smart-Chat
->>>>>>> 9797027b0abd9ac178fdd68407573bce7f116378
+Ensure you have the following installed:
+- [Flutter SDK](
