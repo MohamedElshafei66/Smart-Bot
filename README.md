@@ -20,4 +20,15 @@ Follow these steps to set up and run the Smart-Bot app:
 ### Prerequisites
 
 Ensure you have the following installed:
-- [Flutter SDK](
+- [Flutter SDK](https://flutter.dev/docs/get-started/install): The framework required to build and run the app.
+- **Dart SDK**: Included with Flutter for writing and compiling Dart code.
+- [Android Studio](https://developer.android.com/studio) or [Visual Studio Code](https://code.visualstudio.com/): For running the app on emulators or physical devices.
+- A physical or virtual device (e.g., Android Emulator or iOS Simulator).
+
+---
+
+### Installation
+
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/smart-bot.git
